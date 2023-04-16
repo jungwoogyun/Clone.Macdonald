@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- reset.css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  
+    <!-- BS Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+    <style>
+        /* 01 Start */
+        *{
+            font-size : 1.2rem;
+            box-sizing: border-box;
+        }
+        body{ }
+        a{
+            text-decoration: none;
+            color : black;
+        }
+        #wrapper{}
+        #wrapper>header{
+            height : 150px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            /*  */
+            padding : 0 50px;
+        }
+        #wrapper>header>*{
+            margin : 0 20px;
+        }
+        #wrapper>header>.mac-logo{}
+
+        #wrapper>header>nav{
+
+        }
+        #wrapper>header>nav>.depth1{
+
+            display:flex;
+            justify-content: center;
+            
+            /* depth설정 */
+            height : 150px; 
+            line-height : 150px;
+            position:relative;
+            /* border :1px solid gray; */
+
+        }   
+        #wrapper>header>nav>.depth1>li{
+            width : 150px;
+            text-align: center;
+        }
+        #wrapper>header>nav>.depth1>li>a{
+            display:block;
+        }
+
+        #wrapper>header>nav>.depth1>li>.depth2{
+            display:none;
+            
+        }
+        #wrapper>header>nav>.depth1>li>.depth2>li{
+            width : 150px;
+            height : 65px;
+            line-height : 65px;
+            text-align: center; 
+        }
+        #wrapper>header>nav>.depth1>li>.depth2>li>a{
+            display:block;
+        }
+
+
+        #wrapper>header>nav>.depth1:hover .depth2{
+            
+            display:block;
+            padding : 0px;
+             
+            /* background-color : lightblue;    */
+            position:absolute;
+            border : 1px solid gray;
+           
+        }
+        /* 밑줄라인 */
+        #wrapper>header>nav>.depth1:hover:before{
+            content: "";
+            border : 0.5px solid lightgray;
+            position:absolute;
+            top:150px;
+            width : 120vw;
+            height : 1px;
+
+        }
+        #wrapper>header>nav>.depth1:hover:after{
+             content: "";
+             background-color : white;
+             border-bottom : 0.5px solid yellowgreen;
+             height : 300px;
+             position:fixed;
+             left:0px;
+             top:100px;
+             width : 120vw;
+             z-index:-2;
+        }
+
+
+        #wrapper>header>.mac-utils{
+           
+            font-size :  0.8em;
+            height : 150px; 
+            line-height : 140px;
+            overflow:hidden;
+ 
+        }
+        #wrapper>header>.mac-utils>a{
+            margin : 0 10px;
+            
+        }
+        /* 01 End */
+
+    </style>
+    <div id="wrapper">
+
+        <header>
+            <div class="mac-logo">
+                <img src="https://www.mcdonalds.co.kr/kor/images/common/logo.png" alt="logo" /> 
+            </div>
+            <nav>
+                    <ul class="depth1">
+                        <li>
+                            <a href="">Menu</a>
+                            <ul class="depth2">
+                                <li><a href="">Submenu1</a></li>
+                                <li><a href="">Submenu2</a></li>
+                                <li><a href="">Submenu3</a></li>
+                                <li><a href="">Submenu4</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Store</a>
+                            <ul class="depth2">
+                                <li><a href="">Submenu1</a></li>
+                                <li><a href="">Submenu2</a></li>
+                                <li><a href="">Submenu3</a></li>
+                                <li><a href="">Submenu4</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">What's New</a>
+                            <ul class="depth2">
+                                <li><a href="">Submenu1</a></li>
+                                <li><a href="">Submenu2</a></li>
+                                <li><a href="">Submenu3</a></li>
+                                <li><a href="">Submenu4</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Story</a>
+                            <ul class="depth2">
+                                <li><a href="">Submenu1</a></li>
+                                <li><a href="">Submenu2</a></li>
+                                <li><a href="">Submenu3</a></li>
+                                <li><a href="">Submenu4</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+
+            </nav>
+            <div class="mac-utils">
+                <a href="">임차문의</a>
+                <a href="">RECRUIT</a>
+                <a href="">ENG</a>
+                <a href="">돋보기</a>
+            </div>
+
+        </header>
+
+    </div>
+    
+</body>
+</html>
